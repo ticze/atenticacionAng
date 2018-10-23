@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "aten0": {
+    "to-do-list": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/aten0",
+            "outputPath": "dist/to-do-list",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -22,7 +22,8 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [ 
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -50,18 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "aten0:build"
+            "browserTarget": "to-do-list:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "aten0:build:production"
+              "browserTarget": "to-do-list:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "aten0:build"
+            "browserTarget": "to-do-list:build"
           }
         },
         "test": {
@@ -95,7 +96,7 @@
         }
       }
     },
-    "aten0-e2e": {
+    "to-do-list-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +104,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "aten0:serve"
+            "devServerTarget": "to-do-list:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "aten0:serve:production"
+              "devServerTarget": "to-do-list:serve:production"
             }
           }
         },
