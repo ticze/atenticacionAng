@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProtegidaComponent } from './components/protegida/protegida.component';
+import {AuthService} from './service/auth.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { ProtegidaComponent } from './components/protegida/protegida.component';
     HttpModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
