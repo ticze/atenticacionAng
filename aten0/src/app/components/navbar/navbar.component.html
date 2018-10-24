@@ -5,19 +5,19 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item ">
+      <li class="nav-item" routerlinkActive="active">
         <a class="nav-link"  [routerLink] = "['home']">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item"> 
+      <li class="nav-item" routerlinkActive="active"> 
         <a class="nav-link" [routerLink] = "['menu']">Menú</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink] = "['protegida']">Protegida</a>
+      <li class="nav-item" routerlinkActive="active" *ngIf="auth.isAuthenticated()">
+        <a class="nav-link" [routerLink] = "['protegida']" >Protegida</a>
       </li>
     </ul>
     <span class="navbar-text">
-      <button (click)="login()" *ngIf="!auth.isAuthenticated()" type="button" class="btn btn-outline-primary">Ingresar</button>
-      <button (click)="salir()" *ngIf="auth.isAuthenticated()" type="button" class="btn btn-outline-primary">Salir</button>
+      <button (click)="login()" *ngIf="!auth.isAuthenticated()" type="button" class="btn btn-outline-primary btn-sm">Registarse</button>
+      <button (click)="salir()" *ngIf="auth.isAuthenticated()" type="button" class="btn btn-outline-primary btn-sm">Salir</button>
     </span>
   </div>
 </nav>

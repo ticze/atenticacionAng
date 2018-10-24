@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ProtegidaComponent } from './components/protegida/protegida.component';
 import {AuthService} from './service/auth.service';
+import { AuthGuardService } from './service/auth-guard.service'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {AuthService} from './service/auth.service';
     APP_ROUTING
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })
